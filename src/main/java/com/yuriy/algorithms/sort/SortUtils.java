@@ -14,9 +14,9 @@ public class SortUtils {
         int mid = (start + end) / 2;
         mergeSort(array, aux, start, mid);
         mergeSort(array, aux, mid + 1, end);
-       /* if (array[mid + 1].compareTo(array[mid]) >= 0) {
+        if (array[mid + 1].compareTo(array[mid]) >= 0) {
             return;
-        }*/
+        }
         merge(array, aux, start, end);
     }
 
