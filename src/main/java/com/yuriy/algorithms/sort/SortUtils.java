@@ -15,12 +15,6 @@ public class SortUtils {
         }
     }
 
-    private static void swap(Comparable[] array, int i, int j) {
-        Comparable temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
-
     public static void mergeSort(Comparable[] array) {
         Comparable[] tempArray = new Comparable[array.length];
         mergeSort(array, tempArray, 0, array.length - 1);
@@ -86,5 +80,11 @@ public class SortUtils {
         }
         threeWayQuickSort(array, start, lessThanIndex - 1);
         threeWayQuickSort(array, greaterThanIndex + 1, end);
+    }
+
+    private static void swap(Comparable[] array, int i, int j) {
+        Comparable temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
     }
 }
