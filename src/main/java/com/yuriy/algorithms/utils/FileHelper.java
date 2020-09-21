@@ -1,5 +1,6 @@
 package com.yuriy.algorithms.utils;
 
+import com.yuriy.algorithms.find.ZipCode;
 import com.yuriy.algorithms.sort.SortMain;
 
 import java.io.*;
@@ -33,17 +34,17 @@ public class FileHelper {
         return array;
     }
 
-    public static String[] readStrings(String fileName, int n) {
-        String[] array = new String[n];
+    public static ZipCode[] readZipCodes(String fileName, int n) {
+        ZipCode[] zipCodes = new ZipCode[n];
         int i = 0;
         try (Scanner scanner = new Scanner(new BufferedReader(new FileReader(SOURCE_PATH.toAbsolutePath() + fileName)))){
             while (scanner.hasNext() && i < n) {
-                array[i++] = scanner.nextLine();
+                zipCodes[i++] = new ZipCode(scanner.nextLine());
             }
         } catch (Exception e) {
             System.out.println("Failed to read from the file.");
         }
-        return array;
+        return zipCodes;
     }
 
     public static void writeToFile (String fileName, Object[] array) {

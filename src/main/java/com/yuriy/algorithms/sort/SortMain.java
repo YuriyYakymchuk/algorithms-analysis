@@ -21,19 +21,19 @@ public class SortMain {
         Integer[] bubbleSortArray = Arrays.copyOf(unsortedArray, unsortedArray.length);
         long start = System.currentTimeMillis();
         SortUtils.bubbleSort(bubbleSortArray);
-        System.out.println(String.format("Bubble sort: %d ms", System.currentTimeMillis() - start));
+        System.out.println(String.format("Bubble sort took: %d ms", System.currentTimeMillis() - start));
         writeToFile(BUBBLE_SORT_FILE, bubbleSortArray);
 
         Integer[] mergeSortArray = Arrays.copyOf(unsortedArray, unsortedArray.length);
         start = System.currentTimeMillis();
         SortUtils.mergeSort(mergeSortArray);
-        System.out.println(String.format("Merge sort: %d ms", System.currentTimeMillis() - start));
+        System.out.println(String.format("Merge sort took: %d ms", System.currentTimeMillis() - start));
         writeToFile(MERGE_SORT_FILE, mergeSortArray);
 
         Integer[] quickSortArray = Arrays.copyOf(unsortedArray, unsortedArray.length);
         start = System.currentTimeMillis();
         SortUtils.quickSort(quickSortArray);
-        System.out.println(String.format("Quick sort: %d ms", System.currentTimeMillis() - start));
+        System.out.println(String.format("Quick sort took: %d ms", System.currentTimeMillis() - start));
         writeToFile(QUICK_SORT_FILE, quickSortArray);
     }
 
