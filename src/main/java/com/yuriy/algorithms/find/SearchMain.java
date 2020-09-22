@@ -1,5 +1,7 @@
 package com.yuriy.algorithms.find;
 
+import com.yuriy.algorithms.sort.SortUtils;
+
 import static com.yuriy.algorithms.utils.FileHelper.readZipCodes;
 
 public class SearchMain {
@@ -7,9 +9,11 @@ public class SearchMain {
     private final static String UNSORTED_NAMES_FILE = "/UnsortedZipcodes.txt";
 
     public static void main(String[] args) {
-        int n = 100000;
+        int n = 13000;
 
         ZipCode[] zipCodes = readZipCodes(UNSORTED_NAMES_FILE, n);
+
+        SortUtils.quickSort(zipCodes);
 
         BinarySearchTree<ZipCode, String> binarySearchTree = new BinarySearchTree<>();
         RedBlackTree<ZipCode, String> redBlackTree = new RedBlackTree<>();
