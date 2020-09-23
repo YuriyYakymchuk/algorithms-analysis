@@ -6,7 +6,7 @@ import static com.yuriy.algorithms.utils.FileHelper.readZipCodes;
 
 public class SearchMain {
 
-    private final static String UNSORTED_NAMES_FILE = "/UnsortedZipcodes.txt";
+    private final static String UNSORTED_NAMES_FILE = "/UnsortedZipCodes.txt";
 
     public static void main(String[] args) {
         int n = 13000;
