@@ -21,7 +21,7 @@ public class ExpressionValidator {
                     return false;
                 }
                 stack.pop();
-            } else {
+            } else if (symbolMap.containsValue(c)) {
                 stack.push(c);
             }
         }

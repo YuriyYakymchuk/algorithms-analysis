@@ -14,7 +14,7 @@ public class SortMain {
 
     public static void main(String[] args) {
 
-        int n = 10000;
+        int n = 50000;
 
         Integer[] unsortedArray = readInts(UNSORTED_ARRAY_FILE, n);
 
